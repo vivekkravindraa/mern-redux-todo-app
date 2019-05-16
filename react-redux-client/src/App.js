@@ -1,4 +1,3 @@
-// ./react-redux-client/src/App.js
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
@@ -11,20 +10,20 @@ const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
 
 class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <div>
-          <Router history={history} routes={routes} />
-        </div>
-      </Provider>
-    );
-  }
+    render() {
+        return (
+            <Provider store={store}>
+                <div>
+                    <Router history={history} routes={routes} />
+                </div>
+            </Provider>
+        );
+    }
 }
 
 App.propTypes = {
-  store: PropTypes.object.isRequired,
-  history: PropTypes.object.isRequired
+    store: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
 }
 
 export default App;
